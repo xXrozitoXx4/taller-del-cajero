@@ -29,6 +29,7 @@
               <div>
                 <select class="" id="cajero" name="cajero" required>
                   <option value="">Seleccione Un Cajero</option>
+                  <option value="0">Todos</option>
                   <option value="1">Cajero 1</option>
                   <option value="2">Cajero 2</option>
                   <option value="3">Cajero 3</option>

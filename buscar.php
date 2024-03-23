@@ -39,7 +39,11 @@ $fecha_final = $_POST['fecha_final'];
 $cajero = $_POST['cajero'];
 
 // Consulta SQL
-$sql = "SELECT * FROM transacciones WHERE cajero = $cajero AND fecha BETWEEN '$fecha_inicial' AND '$fecha_final'";
+if ($cajero == "0") {
+    $sql = "SELECT * FROM transacciones WHERE fecha BETWEEN '$fecha_inicial' AND '$fecha_final'";
+} else {
+    $sql = "SELECT * FROM transacciones WHERE cajero = $cajero AND fecha BETWEEN '$fecha_inicial' AND '$fecha_final'";
+}
 
 $result = $conn->query($sql);
 
