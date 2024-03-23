@@ -47,8 +47,8 @@ if(isset($_POST['cajero']) && isset($_POST['cliente']) && isset($_POST['valor'])
 </head>
 <body>
     <div class="main">
-    <div class="box">
-    <form action="registro.php" method="post">
+    <div class="box_reg">
+    <form action="registro.php" method="post" class="form_reg">
         <section class="section">
             <div class="grid_reg">
                 <div>

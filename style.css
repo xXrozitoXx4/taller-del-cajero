@@ -1,114 +1,154 @@
 * {
-    font-family: 'Segoe UI';
+  font-family: 'Segoe UI';
 }
 
 body {
-    background: url(./imgs/abstract-wave-grey-duotone_3840x2160.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  background: url(./imgs/abstract-wave-grey-duotone_3840x2160.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-.main{
-    width: 100%;
+.main {
+  width: 100%;
+  height: 100%;
 }
 
-.box{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    height: 100%;
+.box_base {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  justify-items: center;
+  align-content: center;
+  gap: 6px;
+  width: 100%;
+  height: 100%;
 }
+
+.box_reg {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.form_reg {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+/*
+.box1 .box2 {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+*/
+
 .section {
-    background-color: transparent;
-    border: 1px solid;
-    border-color: #467186;
-    backdrop-filter: blur(20px);
-    width: 300px;
-    padding: 50px;
-    border-radius: 20px;
-    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.50);
+  background-color: transparent;
+  border: 1px solid;
+  border-color: #467186;
+  backdrop-filter: blur(20px);
+  width: 300px;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.5);
 }
 
-.grid_index{
-    display: grid;
-    grid-template-rows: repeat(5, minmax(0, 1fr));
-    justify-items: center;
-    gap: 6px;
+.grid_index {
+  display: grid;
+  grid-template-rows: repeat(5, minmax(0, 1fr));
+  justify-items: center;
+  gap: 6px;
 }
 
-.grid_reg{
-    display: grid;
-    grid-template-rows: repeat(6, minmax(0, 1fr));
-    justify-items: center;
-    gap: 6px;
+.grid_reg {
+  display: grid;
+  grid-template-rows: repeat(6, minmax(0, 1fr));
+  justify-items: center;
+  gap: 6px;
 }
 
-input{
-    border-radius: 5px;
-    border: none;
-    width: 165px;
-    height: 100%;
-    text-align: center;
+form {
+  margin: 0 !important;
 }
 
-select{
-    text-align: center;
-    border-radius: 5px;
-    border: none;
-    padding: 6px;
-    width: 165px;
-} 
-
-.register_icon{
-    color: #dededa;
-    background-color: #467186;
-    padding: 7px;
-    border-radius: 8px;
-
+.form_reg {
+  height: 100% !important;
 }
 
-.btn_buscar{
-    text-transform: uppercase;
-    text-align: center;
-    background-color: #467186;
-    color: white;
-    width: min-content;
-    cursor: pointer;
-    transition-duration: 150ms;
+input {
+  border-radius: 5px;
+  border: none;
+  width: 165px;
+  height: 100%;
+  text-align: center;
 }
 
-.btn_buscar:hover{
-    transition-duration: 150ms;
-    background-color: #0f374c;
+select {
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  padding: 6px;
+  width: 165px;
 }
 
-.btn_registro{
-    text-transform: uppercase;
-    text-align: center;
-    background-color: #467186;
-    color: white;
-    width: min-content;
-    cursor: pointer;
-    transition-duration: 150ms;
+.register_icon {
+  color: #dededa;
+  background-color: #467186;
+  padding: 7px;
+  border-radius: 8px;
 }
 
-.btn_registro:hover{
-    transition-duration: 150ms;
-    background-color: #0f374c;
+.btn_buscar {
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #467186;
+  color: white;
+  width: min-content;
+  cursor: pointer;
+  transition-duration: 150ms;
+}
+
+.resultados {
+  text-align: center;
+  font-size: 24px;
+}
+
+.btn_buscar:hover {
+  transition-duration: 150ms;
+  background-color: #0f374c;
+}
+
+.btn_registro {
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #467186;
+  color: white;
+  width: min-content;
+  cursor: pointer;
+  transition-duration: 150ms;
+}
+
+.btn_registro:hover {
+  transition-duration: 150ms;
+  background-color: #0f374c;
 }
 
 ::-webkit-calendar-picker-indicator {
-    background-color: #a2b5be;
-    border-radius: 5px;
-    margin-right: 10px;
-    transition-duration: 150ms;
+  background-color: #a2b5be;
+  border-radius: 5px;
+  margin-right: 10px;
+  transition-duration: 150ms;
 }
 
-::-webkit-calendar-picker-indicator:hover{
-    cursor: pointer;
-    transition-duration: 150ms;
-    background-color: #467186;
-
+::-webkit-calendar-picker-indicator:hover {
+  cursor: pointer;
+  transition-duration: 150ms;
+  background-color: #467186;
 }
-
