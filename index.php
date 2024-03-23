@@ -14,6 +14,7 @@
     <div class="main">
       <div class="box_base">
         <div class="box1">
+          <form action="index.php" method="post" class="form_reg">
           <section class="section">
             <div class="grid_index">
               <div>
@@ -47,12 +48,15 @@
               </div>
             </div>
           </section>
+          </form>
         </div>
         <div class="box2">
           <div class="">
             <section class="section">
               <div class="resultados">
-                <div>a</div>
+                <div>
+                  
+                </div>
               </div>
             </section>
           </div>

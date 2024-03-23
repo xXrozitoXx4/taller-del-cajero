@@ -72,7 +72,7 @@ if(isset($_POST['cajero']) && isset($_POST['cliente']) && isset($_POST['valor'])
                     <input type="submit" value="registrar" class="btn_registro">
                 </div>
                 <div>
-                    <a href="./index.html">
+                    <a href="./index.php">
                     <input type="button" value="buscar" class="btn_buscar">
                     </a>
                 </div>

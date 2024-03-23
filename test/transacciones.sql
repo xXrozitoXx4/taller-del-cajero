@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-03-2024 a las 03:29:07
+-- Tiempo de generación: 23-03-2024 a las 03:48:36
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -40,7 +40,9 @@ CREATE TABLE `transacciones` (
 --
 
 INSERT INTO `transacciones` (`id`, `cliente`, `cajero`, `valor`, `fecha`) VALUES
-(2, 'Juan Perez', 1, 50000, '2024-03-20');
+(2, 'Juan Perez', 1, 50000, '2024-03-20'),
+(3, 'Jaime Lopez', 2, 8000, '2024-03-12'),
+(4, 'Laura Herna', 3, 1000000, '2024-02-20');
 
 --
 -- Índices para tablas volcadas
@@ -60,7 +62,7 @@ ALTER TABLE `transacciones`
 -- AUTO_INCREMENT de la tabla `transacciones`
 --
 ALTER TABLE `transacciones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

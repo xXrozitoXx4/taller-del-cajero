@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-03-2024 a las 03:29:51
+-- Tiempo de generación: 23-03-2024 a las 03:49:46
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `registros` (
   `id` int(11) NOT NULL,
-  `Cajero` varchar(30) DEFAULT NULL,
+  `Cajero` int(30) DEFAULT NULL,
   `Cliente` varchar(30) DEFAULT NULL,
   `Valor` varchar(10) DEFAULT NULL,
   `Fecha` date DEFAULT NULL
@@ -40,8 +40,8 @@ CREATE TABLE `registros` (
 --
 
 INSERT INTO `registros` (`id`, `Cajero`, `Cliente`, `Valor`, `Fecha`) VALUES
-(5, 'cajero1', 'Rozo', '2000', '2024-03-20'),
-(6, 'cajero2', 'Richard', '5000', '2024-03-12');
+(5, 1, 'Rozo', '2000', '2024-03-20'),
+(6, 2, 'Richard', '5000', '2024-03-12');
 
 --
 -- Índices para tablas volcadas
