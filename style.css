@@ -49,6 +49,10 @@ body {
 }
 */
 
+.test{
+  border: 5px solid red ;
+}
+
 .section {
   background-color: transparent;
   border: 1px solid;

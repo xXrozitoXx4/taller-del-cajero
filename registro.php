@@ -3,7 +3,7 @@
 $servername = "localhost"; // Cambia esto si tu servidor de base de datos tiene un nombre diferente
 $username = "root"; // Cambia esto por tu nombre de usuario de la base de datos
 $password = ""; // Cambia esto por tu contraseña de la base de datos
-$dbname = "cajero"; // Nombre de la base de datos
+$dbname = "transacciones"; // Nombre de la base de datos
 
 // Crear conexión
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -14,14 +14,14 @@ if ($conn->connect_error) {
 }
 
 // Insertar los datos en la base de datos
-if(isset($_POST['cajero']) && isset($_POST['cliente']) && isset($_POST['valor']) && isset($_POST['fecha'])) {
-    $Cajero = $_POST['cajero'];
+if(isset($_POST['cliente']) && isset($_POST['cajero']) && isset($_POST['valor']) && isset($_POST['fecha'])) {
     $Cliente = $_POST['cliente'];
+    $Cajero = $_POST['cajero'];
     $Valor = $_POST['valor'];
     $Fecha = $_POST['fecha'];
 
-    $sql = "INSERT INTO cliente (cajero, cliente, valor, fecha)
-            VALUES ('$Cajero', '$Cliente', '$Valor', '$Fecha')";
+    $sql = "INSERT INTO transacciones (cliente, cajero, valor, fecha)
+            VALUES ('$Cliente', '$Cajero', '$Valor', '$Fecha')";
 
     if ($conn->query($sql) === TRUE) {
         echo "";
@@ -52,11 +52,11 @@ if(isset($_POST['cajero']) && isset($_POST['cliente']) && isset($_POST['valor'])
         <section class="section">
             <div class="grid_reg">
                 <div>
-                    <select class="">
+                    <select id="cajero" name="cajero" required>
                         <option value="">Seleccione Un Cajero</option>
-                        <option value="cajero1" id="cajero" name="cajero">Cajero 1</option>
-                        <option value="cajero2" id="cajero" name="cajero">Cajero 2</option>
-                        <option value="cajero3" id="cajero" name="cajero">Cajero 3</option>
+                        <option value="1">Cajero 1</option>
+                        <option value="2">Cajero 2</option>
+                        <option value="3">Cajero 3</option>
                     </select>
                 </div>
                 <div>

@@ -1,3 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    table, th, td {
+    text-align: center;
+    color: white;
+    border: 1px solid white;
+    border-collapse: collapse;
+    }
+
+    td, th {
+        padding: 6px;
+    }
+</style>
+<body>
 <?php
 // Conexión a la base de datos
 $servername = "localhost";
@@ -24,10 +45,9 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // Mostrar los resultados
-    echo "<h2>Resultados:</h2>";
-    echo "<table border='1'><tr><th>ID</th><th>Cliente</th><th>Cajero</th><th>Valor</th><th>Fecha</th></tr>";
+    echo "<table><tr><th>Cliente</th><th>Cajero</th><th>Valor</th><th>Fecha</th></tr>";
     while($row = $result->fetch_assoc()) {
-        echo "<tr><td>".$row["id"]."</td><td>".$row["cliente"]."</td><td>".$row["cajero"]."</td><td>".$row["valor"]."</td><td>".$row["fecha"]."</td></tr>";
+        echo "</td><td>".$row["cliente"]."</td><td>".$row["cajero"]."</td><td>".$row["valor"]."</td><td>".$row["fecha"]."</td></tr>";
     }
     echo "</table>";
 } else {
@@ -35,3 +55,7 @@ if ($result->num_rows > 0) {
 }
 $conn->close();
 ?>
+</body>
+</html>
+
+
