@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-03-2024 a las 15:51:46
--- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.0.30
+-- Tiempo de generación: 31-03-2024 a las 23:48:04
+-- Versión del servidor: 10.4.28-MariaDB
+-- Versión de PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -43,7 +43,10 @@ INSERT INTO `transacciones` (`id`, `cliente`, `cajero`, `valor`, `fecha`) VALUES
 (2, 'Juan Perez', 1, 50000, '2024-03-20'),
 (3, 'Jaime Lopez', 2, 8000, '2024-03-12'),
 (4, 'Laura Herna', 3, 1000000, '2024-02-20'),
-(8, 'Heider', 3, 5000, '2024-01-01');
+(6, 'Pepe Diaz', 2, 50000, '2024-03-31'),
+(7, 'Andres Torr', 2, 1000, '2024-03-20'),
+(15, 'Julian Sanc', 3, 10000, '2024-03-31'),
+(19, 'Luis Velez', 1, 900, '2024-02-28');
 
 --
 -- Índices para tablas volcadas
@@ -63,7 +66,7 @@ ALTER TABLE `transacciones`
 -- AUTO_INCREMENT de la tabla `transacciones`
 --
 ALTER TABLE `transacciones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
