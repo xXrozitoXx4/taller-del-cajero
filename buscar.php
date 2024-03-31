@@ -47,13 +47,19 @@ if ($cajero == "0") {
 
 $result = $conn->query($sql);
 
+// Inicializar la variable para almacenar la suma total de valores
+$suma_valores = 0;
+
 if ($result->num_rows > 0) {
     // Mostrar los resultados
     echo "<table><tr><th>Cliente</th><th>Cajero</th><th>Valor</th><th>Fecha</th></tr>";
     while($row = $result->fetch_assoc()) {
         echo "</td><td>".$row["cliente"]."</td><td>".$row["cajero"]."</td><td>".$row["valor"]."</td><td>".$row["fecha"]."</td></tr>";
+        $suma_valores += $row["valor"];
     }
     echo "</table>";
+    // Mostrar la suma total de los valores de las transacciones
+    echo "<p>Suma total de los valores: $suma_valores</p>";
 } else {
     echo "No se encontraron resultados";
 }
@@ -61,5 +67,3 @@ $conn->close();
 ?>
 </body>
 </html>
-
-
