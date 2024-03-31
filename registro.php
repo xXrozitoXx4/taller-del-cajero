@@ -13,7 +13,7 @@ if ($conn->connect_error) {
     die("Error de conexión: " . $conn->connect_error);
 }
 
-// Insertar los datos en la base de datos
+// Insertar los datos en la base de datos después de la confirmación
 if(isset($_POST['cliente']) && isset($_POST['cajero']) && isset($_POST['valor']) && isset($_POST['fecha'])) {
     $Cliente = $_POST['cliente'];
     $Cajero = $_POST['cajero'];
@@ -29,10 +29,7 @@ if(isset($_POST['cliente']) && isset($_POST['cajero']) && isset($_POST['valor'])
         echo "Error al insertar registro: " . $conn->error;
     }
 }
-
 ?>
-
-
 
 <html lang="es">
 <head>
@@ -43,12 +40,20 @@ if(isset($_POST['cliente']) && isset($_POST['cajero']) && isset($_POST['valor'])
     <link rel="stylesheet" href="style.css">
     <title>Cajeros</title>
     <script src="https://kit.fontawesome.com/7dccdc2a62.js" crossorigin="anonymous"></script>
-    
+    <script>
+        function confirmSubmit() {
+            var cliente = document.getElementById('cliente').value;
+            var cajero = document.getElementById('cajero').value;
+            var valor = document.getElementById('valor').value;
+            var fecha = document.getElementById('fecha').value;
+            return confirm(`¿Estás seguro que quieres registrar al cliente ${cliente} en el cajero ${cajero} con el valor ${valor} y la fecha ${fecha}?`);
+        }
+    </script>
 </head>
 <body>
     <div class="main">
     <div class="box_reg">
-    <form action="registro.php" method="post" class="form_reg">
+    <form action="registro.php" method="post" class="form_reg" onsubmit="return confirmSubmit()">
         <section class="section">
             <div class="grid_reg">
                 <div>
@@ -60,13 +65,13 @@ if(isset($_POST['cliente']) && isset($_POST['cajero']) && isset($_POST['valor'])
                     </select>
                 </div>
                 <div>
-                    <input type="text" id="cliente" placeholder="Cliente" name="cliente"/>
+                    <input type="text" id="cliente" placeholder="Cliente" name="cliente" required/>
                 </div>
                 <div>
-                    <input type="text" id="valor" placeholder="Valor" name="valor"/>
+                    <input type="text" id="valor" placeholder="Valor" name="valor" required/>
                 </div>
                 <div>
-                    <input type="date" id="fecha" placeholder="Fecha" name="fecha"/>
+                    <input type="date" id="fecha" placeholder="Fecha" name="fecha" required/>
                 </div>
                 <div>
                     <input type="submit" value="registrar" class="btn_registro">

@@ -17,6 +17,12 @@
     td, th {
         padding: 6px;
     }
+
+    p{
+        color: white;
+        font-weight: 600;
+        text-decoration-line: underline;
+    }
 </style>
 <body>
 <?php
@@ -59,7 +65,7 @@ if ($result->num_rows > 0) {
     }
     echo "</table>";
     // Mostrar la suma total de los valores de las transacciones
-    echo "<p>Suma total de los valores: $suma_valores</p>";
+    echo "<p>Total: $suma_valores</p>";
 } else {
     echo "No se encontraron resultados";
 }
