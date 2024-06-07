@@ -23,7 +23,7 @@ if(isset($_POST['cliente']) && isset($_POST['cajero']) && isset($_POST['valor'])
     $sql = "INSERT INTO transacciones (cliente, cajero, valor, fecha)
             VALUES ('$Cliente', '$Cajero', '$Valor', '$Fecha')";
 
-    if ($conn->query($sql) === TRUE) {
+    if ($conn->query($sql) === true) {
         echo "";
     } else {
         echo "Error al insertar registro: " . $conn->error;
